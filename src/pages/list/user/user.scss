@@ -1,0 +1,74 @@
+.user-info {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  cursor: pointer;
+
+  .user-image,
+  .user-last,
+  .user-first,
+  .user-username,
+  .user-phone,
+  .user-location,
+  .user-glyph {
+    display: flex;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 135px;
+
+    word-wrap: break-word;
+
+    color: #444;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+
+    align-items: center;
+  }
+
+  .user-image {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    text-align: center;
+    text-align: center;
+
+    flex-basis: 135px;
+    justify-content: center;
+    img {
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px white, 0 0 0 7px silver;
+    }
+   }
+  .user-last {
+    flex-basis: 180px;
+   }
+  .user-first {
+    flex-basis: 180px;
+   }
+  .user-username {
+    flex-basis: 180px;
+   }
+  .user-phone {
+    flex-basis: 180px;
+   }
+  .user-location {
+    flex-basis: 180px;
+   }
+  .user-glyph {
+    flex-basis: 135px;
+    justify-content: center;
+    svg {
+      height: 100%;
+    }
+   }
+}
+
+.odd {
+  background: #aaa;
+}
+
+@import 'userDetail/userDetail';

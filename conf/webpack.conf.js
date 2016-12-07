@@ -48,6 +48,9 @@ module.exports = {
     ]
   },
   plugins: [
+  new webpack.ProvidePlugin({
+    'window._': 'lodash'
+  }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({

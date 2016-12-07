@@ -1,7 +1,13 @@
 {
   "dependencies": {
     "angular": "^1.5.0",
-    "angular-ui-router": "1.0.0-beta.1"
+    "angular-animate": "^1.5.9",
+    "angular-resource": "^1.5.9",
+    "angular-ui-router": "1.0.0-beta.1",
+    "bootstrap-sass": "^3.3.7",
+    "highcharts-ng": "0.0.13",
+    "lodash": "^4.17.2",
+    "restangular": "^1.5.2"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0-beta.2",

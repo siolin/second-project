@@ -9,5 +9,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/',
       component: 'app'
+    })
+    .state('list', {
+      url: '/list',
+      component: 'list',
+      resolve: {
+        info: Restangular => {
+          return Restangular.oneUrl('users', 'https://randomuser.me/');
+        }
+      }
     });
 }

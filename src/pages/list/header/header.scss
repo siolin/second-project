@@ -1,0 +1,36 @@
+.header-list {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+
+  .user-image,
+  .user-last,
+  .user-first,
+  .user-username,
+  .user-phone,
+  .user-location,
+  .user-glyph {
+    box-sizing: border-box;
+    max-width: 100%;
+
+    word-wrap: break-word;
+
+    color: #444;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    min-width: 135px;
+
+    flex-grow: 1;
+  }
+
+  .user-image { flex-basis: 135px; }
+  .user-last { flex-basis: 180px; }
+  .user-first { flex-basis: 180px; }
+  .user-username { flex-basis: 180px; }
+  .user-phone { flex-basis: 180px; }
+  .user-location { flex-basis: 180px; }
+  .user-glyph { flex-basis: 135px; }
+}

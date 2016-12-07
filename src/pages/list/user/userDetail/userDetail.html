@@ -1,0 +1,37 @@
+<div class="user-detail-wrapper slide" ng-show="$ctrl.show" ng-class="$ctrl.class">
+  <!-- <div class="user-name-wrapper">
+    <b class="user-name">{{$ctrl.user.name.first}}</b>
+    <img class="user-thumbnail" src="{{$ctrl.genderlink + 'assets/' + $ctrl.user.gender + '.svg'}}" alt="{{$ctrl.user.gender}}">
+  </div> -->
+  <div class="user-detail">
+    <div class="block">
+
+      <div class="user-name-wrapper">
+        <b class="user-name">{{$ctrl.user.name.first}}</b>
+        <img class="user-thumbnail" src="{{$ctrl.genderlink + 'assets/' + $ctrl.user.gender + '.svg'}}" alt="{{$ctrl.user.gender}}">
+      </div>
+
+      <strong>Username</strong> {{$ctrl.user.login.username}}<br>
+      <strong>Registered</strong> {{$ctrl.user.registered}}<br>
+      <strong>Email</strong> {{$ctrl.user.email}}<br>
+
+    </div>
+
+    <div class="block">
+      <strong>Address</strong> {{$ctrl.user.location.street}}<br>
+      <strong>City</strong> {{$ctrl.user.location.city}}<br>
+      <strong>Zip Code</strong> {{$ctrl.user.location.postcode}}<br>
+    </div>
+
+    <div class="block">
+      <strong>Birthday</strong> {{$ctrl.user.dob}}<br>
+      <strong>Phone</strong> {{$ctrl.user.phone}}<br>
+      <strong>Cell</strong> {{$ctrl.user.cell}}<br>
+    </div>
+
+    <div class="block">
+      <img class="foto" src="{{$ctrl.user.picture.large}}" alt="{{$ctrl.user.name.first}}">
+    </div>
+
+  </div>
+</div>
