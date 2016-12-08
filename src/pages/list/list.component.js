@@ -4,8 +4,5 @@ export const list = {
     info: '<'
   },
   controller() {
-    this.info.customGET('api', {results: '10'}).then(users => {
-      this.users = users.results;
-    });
   }
 };

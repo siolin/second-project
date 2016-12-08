@@ -1,3 +1,11 @@
+.user-wrapper {
+  padding-bottom: 0;
+  transition: .4s padding-bottom;
+  // transition-delay: .5s;
+  overflow: hidden;
+  position: relative;
+}
+
 .user-info {
   display: flex;
   flex-direction: row;
@@ -61,14 +69,19 @@
   .user-glyph {
     flex-basis: 135px;
     justify-content: center;
-    svg {
-      height: 100%;
+    img {
+      width: 50px;
+      height: 50px;
     }
    }
 }
 
 .odd {
   background: #aaa;
+}
+
+.show-detail {
+  padding-bottom: 225px;
 }
 
 @import 'userDetail/userDetail';

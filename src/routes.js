@@ -15,7 +15,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       component: 'list',
       resolve: {
         info: Restangular => {
-          return Restangular.oneUrl('users', 'https://randomuser.me/');
+          return Restangular.oneUrl('api', 'https://randomuser.me/api').get({results: 12}).then(data => data.results);
         }
       }
     });
