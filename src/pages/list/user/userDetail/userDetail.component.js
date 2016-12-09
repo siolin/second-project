@@ -1,3 +1,5 @@
+import UserDetail from './userDetail.controller';
+
 export const userDetail = {
   bindings: {
     user: '<',
@@ -5,7 +7,5 @@ export const userDetail = {
     even: '<'
   },
   template: require('./userDetail.html'),
-  controller() {
-    // this.genderLink = $location.host();
-  }
+  controller: UserDetail
 };
