@@ -3,7 +3,8 @@ export const user = {
     users: '<'
   },
   template: require('./user.html'),
-  controller($log, $scope) {
+  controller($scope) {
+    this.showedList = {};
     this.clicked = index => {
       this.showedList[index] = 'show-detail';
       this.index = index;
@@ -45,9 +46,6 @@ export const user = {
         width: `${userInfo.offsetWidth}px`
       };
       this.styles = position;
-    };
-    this.$onInit = () => {
-      this.showedList = {};
     };
   }
 };

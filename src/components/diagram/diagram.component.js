@@ -4,8 +4,7 @@ export const diagram = {
     show: '='
   },
   template: require('./diagram.html'),
-  controller($log) {
-    $log.log(this);
+  controller() {
     this.closeDiagram = () => {
       this.show = false;
     };
@@ -20,12 +19,6 @@ export const diagram = {
     }
     this.labels = ["Male", "Female"];
     this.data = [this.male, this.female];
-    this.colors = ['#434348', '#7cb5ec'];
-    this.options = {
-      animation: {
-        animateRotate: true,
-        animateScale: true
-      }
-    };
+    this.colors = ['#1653E8', '#E81AD7'];
   }
 };

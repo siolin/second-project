@@ -1,33 +1,18 @@
 <div class="user-wrapper" ng-class="$ctrl.showedList[$index]" ng-repeat="user in $ctrl.users">
   <div class="user-info" ng-click="$ctrl.showDetail($index, $event)">
-
     <div class="user-image" ng-class="$even ? 'odd' : ''">
       <img src="{{user.picture.medium}}" alt="{{user.className}}">
     </div>
 
-    <div class="user-last" ng-class="$even ? 'odd' : ''">
-      {{user.name.last}}
-    </div>
-
-    <div class="user-first" ng-class="$even ? 'odd' : ''">
-      {{user.name.first}}
-    </div>
-
-    <div class="user-username" ng-class="$even ? 'odd' : ''">
-      {{user.login.username}}
-    </div>
-
-    <div class="user-phone" ng-class="$even ? 'odd' : ''">
-      {{user.phone}}
-    </div>
-
-    <div class="user-location" ng-class="$even ? 'odd' : ''">
-      {{user.location.city}}
-    </div>
+    <div class="user-last" ng-class="$even ? 'odd' : ''">{{user.name.last}}</div>
+    <div class="user-first" ng-class="$even ? 'odd' : ''">{{user.name.first}}</div>
+    <div class="user-username" ng-class="$even ? 'odd' : ''">{{user.login.username}}</div>
+    <div class="user-phone" ng-class="$even ? 'odd' : ''">{{user.phone}}</div>
+    <div class="user-location" ng-class="$even ? 'odd' : ''">{{user.location.city}}</div>
 
     <div class="user-glyph" ng-class="$even ? 'odd' : ''">
       <img src="/assets/plus-black-symbol.svg" alt="Plus">
     </div>
   </div>
 </div>
-<user-detail ng-style="$ctrl.styles" user="$ctrl.user" show="$ctrl.show" index="$ctrl.index"></user-detail>
+<user-detail ng-style="$ctrl.styles" user="$ctrl.user" show="$ctrl.show" even="$even"></user-detail>

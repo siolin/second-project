@@ -1,17 +1,20 @@
 .user-wrapper {
-  padding-bottom: 0;
-  transition: .4s padding-bottom;
-  // transition-delay: .5s;
-  overflow: hidden;
   position: relative;
+
+  overflow: hidden;
+
+  padding-bottom: 0;
+
+  transition: .4s padding-bottom;
 }
 
 .user-info {
   display: flex;
   flex-direction: row;
 
-  justify-content: center;
   cursor: pointer;
+
+  justify-content: center;
 
   .user-image,
   .user-last,

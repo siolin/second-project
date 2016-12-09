@@ -3,12 +3,9 @@ export const list = {
   bindings: {
     info: '<'
   },
-  controller($log) {
+  controller() {
     this.show = false;
-    // $log.log(this);
     this.showDiagram = () => {
-      $log.log(this);
-      $log.log('clicked');
       this.show = true;
     };
   }
