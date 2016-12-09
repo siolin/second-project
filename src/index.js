@@ -11,15 +11,13 @@ import 'angular-ui-router';
 import 'angular-resource';
 import 'lodash';
 import 'restangular';
-import 'angular-animate';
-import 'highcharts-ng';
+import 'angular-chart.js';
 
 import routesConfig from './routes';
 
 import './index.scss';
-
 angular
-  .module('app', ['ui.router', 'restangular', 'highcharts-ng', 'ngAnimate'])
+  .module('app', ['ui.router', 'restangular', 'chart.js'])
   .config(routesConfig)
   .component('app', hello)
   .component('diagram', diagram)

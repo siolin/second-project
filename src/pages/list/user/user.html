@@ -1,31 +1,31 @@
 <div class="user-wrapper" ng-class="$ctrl.showedList[$index]" ng-repeat="user in $ctrl.users">
   <div class="user-info" ng-click="$ctrl.showDetail($index, $event)">
 
-    <div class="user-image {{($index == 0 || $index % 2 == 0) ? 'odd' : ''}}">
+    <div class="user-image" ng-class="$even ? 'odd' : ''">
       <img src="{{user.picture.medium}}" alt="{{user.className}}">
     </div>
 
-    <div class="user-last {{($index == 0 || $index % 2 == 0) ? 'odd' : ''}}">
+    <div class="user-last" ng-class="$even ? 'odd' : ''">
       {{user.name.last}}
     </div>
 
-    <div class="user-first {{($index == 0 || $index % 2 == 0) ? 'odd' : ''}}">
+    <div class="user-first" ng-class="$even ? 'odd' : ''">
       {{user.name.first}}
     </div>
 
-    <div class="user-username {{($index == 0 || $index % 2 == 0) ? 'odd' : ''}}">
+    <div class="user-username" ng-class="$even ? 'odd' : ''">
       {{user.login.username}}
     </div>
 
-    <div class="user-phone {{($index == 0 || $index % 2 == 0) ? 'odd' : ''}}">
+    <div class="user-phone" ng-class="$even ? 'odd' : ''">
       {{user.phone}}
     </div>
 
-    <div class="user-location {{($index == 0 || $index % 2 == 0) ? 'odd' : ''}}">
+    <div class="user-location" ng-class="$even ? 'odd' : ''">
       {{user.location.city}}
     </div>
 
-    <div class="user-glyph {{($index == 0 || $index % 2 == 0) ? 'odd' : ''}}">
+    <div class="user-glyph" ng-class="$even ? 'odd' : ''">
       <img src="/assets/plus-black-symbol.svg" alt="Plus">
     </div>
   </div>

@@ -3,7 +3,7 @@ export const user = {
     users: '<'
   },
   template: require('./user.html'),
-  controller($log) {
+  controller($log, $scope) {
     this.clicked = index => {
       this.showedList[index] = 'show-detail';
       this.index = index;
@@ -24,41 +24,30 @@ export const user = {
         this.showedList[index] = '';
         this.lastIndex = null;
       } else {
-        // $timeout(() => {
-        //   this.show = true;
-        // }, 400);
         this.lastIndex = index;
       }
     };
     this.calculatePosition = (event, index) => {
-      const string = /user-info/;
-      this.findUserInfo = () => {
-        for (const key in event.path) {
-          if (string.test(event.path[key].className)) {
-            return angular.element(event.path[key]);
-          }
-        }
-      };
-      const userInfo = this.findUserInfo();
-      const wrapper = userInfo.parent();
-      wrapper[0].addEventListener('transitionend', () => {
-        if (!this.users[index].show) {
+      const indexValue = index;
+      const wrapper = event.target.offsetParent;
+      const userInfo = event.target.offsetParent.children[0];
+      wrapper.addEventListener('transitionend', () => {
+        if (this.showedList[indexValue] === 'show-detail') {
           this.show = true;
-          $log.log(this.users[index]);
+          $scope.$digest();
         }
       });
-      const height = userInfo[0].offsetHeight * ++index;
+      const height = userInfo.offsetHeight * ++index;
       const position = {
         position: 'absolute',
-        top: `${height + userInfo[0].offsetHeight}px`,
-        left: `${wrapper[0].offsetLeft}px`,
-        width: `${userInfo[0].offsetWidth}px`
+        top: `${height + userInfo.offsetHeight}px`,
+        left: `${wrapper.offsetLeft}px`,
+        width: `${userInfo.offsetWidth}px`
       };
       this.styles = position;
     };
     this.$onInit = () => {
       this.showedList = {};
-      this.resetShowedList();
     };
   }
 };

@@ -1,10 +1,11 @@
 <div class="wrapper">
   <header class="header">
-    <button type="button" name="button">Show chart</button>
+    <button type="button" name="button" ng-click="$ctrl.showDiagram()">Show chart</button>
   </header>
   <div class="flex-container">
     <list-header></list-header>
     <user users="$ctrl.info"></user>
   </div>
 </div>
-<!-- <diagram></diagram> -->
+<diagram info="$ctrl.info" ng-show="$ctrl.show" show="$ctrl.show"></diagram>
+<!-- <highchart id="chart" config="$ctrl.chartConfig"></highchart> -->
