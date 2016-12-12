@@ -3,15 +3,11 @@ export default routesConfig;
 /** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
-  $urlRouterProvider.otherwise('/list');
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('app', {
       url: '/',
-      component: 'app'
-    })
-    .state('list', {
-      url: '/list',
       component: 'list',
       resolve: {
         info: Restangular => {

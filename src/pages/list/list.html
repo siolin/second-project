@@ -1,8 +1,7 @@
 <header class="main-header">
   <div class="wrapper">
     <div class="main-header-wrapper">
-      <!-- <modal></modal> -->
-      <button type="button" name="button" ng-click="$ctrl.showDiagram()">Show chart</button>
+      <modal male="$ctrl.malePercent" female="$ctrl.femalePercent"></modal>
     </div>
   </div>
 </header>
@@ -14,4 +13,4 @@
     </div>
   </div>
 </div>
-<diagram info="$ctrl.info" ng-show="$ctrl.show" show="$ctrl.show"></diagram>
+<div name="modal-wrapper"></div>
