@@ -46,7 +46,7 @@ export default class User {
     const height = userInfo.offsetHeight * ++index;
     const position = {
       position: 'absolute',
-      top: `${height + userInfo.offsetHeight}px`,
+      top: `${height + wrapper.parentNode.offsetTop}px`,
       left: `${wrapper.offsetLeft}px`,
       width: `${userInfo.offsetWidth}px`
     };
